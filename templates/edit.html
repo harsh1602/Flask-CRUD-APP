@@ -1,0 +1,24 @@
+{% extends 'base.html' %}       // using jinja syntax we are extending the base.html file. 
+
+{% block head %}
+<title>Edit Post</title>
+{% endblock %}
+
+
+
+{% block body %} 
+<h1>Edit posts.</h1>
+
+<hr>
+<h2>Edit Post</h2>
+<form action='/posts/edit/{{post.id}}' method='POST'>
+    Title: <input type='text' name='title' id="title">
+    <br>
+    Author: <input type="text" name="author" id="author"> 
+    <br>
+    Post: <input type="text" name="content" id="content">
+    <br>  
+    <input type="submit" value="Save">  
+</form> 
+</hr>
+{% endblock %}

@@ -1,0 +1,12 @@
+from app import BlogPost imports the BlogPost db created.
+BlogPost.query.all() is used to split all of the blogpost in a list. So this will print the list of all the content in the blogpost db. 
+BlogPost.query.all()[0] is used to print the index 0 blogpost made.
+BlogPost.query.all()[0].title is used to print the title of the 0th index blogpost created.
+BlogPost.query.filter_by(title='First Blog Post!').all() is used to get the all blogpost by the given title. 
+BlogPost.query.get(1) is used to get element by id.
+db.session.delete(BlogPost.query.get(2)) This is used to delete from the db. unique id is also required to be given in get(). (in this BlogPost is the name of the db model)
+db.session.commit() must be done after the above syntax inorder to delete something. 
+
+BlogPost.query.get(2).author = 'ABCD' , this way we can change the author of the post. 
+db.session.commit() needs to be done after that inorder to show the changes on the website.
+

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}       // using jinja syntax we are extending the base.html file. 
+
+{% block head %}
+<title>Home</title>
+{% endblock %}
+<link rel="stylesheet" href="../static/css/index.css">
+{% block body %} 
+<br>
+<h1>Home Page.</h1>
+<br>
+<div>
+    <div class="bg-light p-5 rounded">
+      <div class="col-sm-8 mx-auto">
+        <h1 {text-align: center}>Welcome!!</h1> 
+        
+          <a class="btn btn-primary" href="/posts" role="button">Go to Posts</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %} 
